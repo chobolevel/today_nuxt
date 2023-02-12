@@ -1,0 +1,20 @@
+.diary_post {
+  border: 1px solid red;
+  padding: 20px;
+  margin: 50px 0;
+}
+.post_title {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+.post_content {
+  margin: 30px 0;
+}
+.post_view, .post_like {
+  font-style: italic;
+  margin: 10px 0;
+}
+.post_writer {
+  margin-top: 20px;
+}

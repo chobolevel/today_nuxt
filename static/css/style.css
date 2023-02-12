@@ -59,6 +59,7 @@ header {
   width: 15%;
   min-width: 200px;
   height: 100%;
+  position: sticky;
 }
 .title {
   padding: 40px 20px;
