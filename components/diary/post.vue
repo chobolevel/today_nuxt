@@ -1,6 +1,6 @@
 <template>
   <div class="diary_post">
-    <p class="post_title">{{ item.title }}</p>
+    <nuxt-link :to="'/diary/' + item.id">{{ item.title }}</nuxt-link>
     <p class="post_content">{{ item.content }}</p>
     <span class="post_view">조회수 : {{ item.viewCount }}</span>
     <span class="post_like">좋아요 : {{ item.likeCount }}</span>
@@ -12,12 +12,9 @@
 export default {
   props: {
     item: {
-      type: Object
+      type: Object,
+      required: true
     }
   }
 }
 </script>
-
-<style scoped>
-
-</style>

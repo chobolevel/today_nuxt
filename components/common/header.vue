@@ -2,9 +2,15 @@
   <header>
     <p class="title">오늘하루</p>
     <ul class="main_menu">
-      <li>홈으로</li>
-      <li>작성하기</li>
-      <li>수정하기</li>
+      <li>
+        <nuxt-link to="/">홈으로</nuxt-link>
+      </li>
+      <li>
+        <nuxt-link to="/diary/write">작성하기</nuxt-link>
+      </li>
+      <li>
+        <nuxt-link to="/">내정보</nuxt-link>
+      </li>
     </ul>
   </header>
 </template>

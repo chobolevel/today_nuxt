@@ -1,15 +1,15 @@
 <template>
   <div>
-    <post-form v-for="(diary) in diaryList" :item="diary" :key="diary.id"/>
+    <post v-for="(diary) in diaryList" :item="diary" :key="diary.id"/>
   </div>
 </template>
 
 <script>
 import {DiaryMixins} from "../mixins";
-import PostForm from "../components/diary/postForm.vue";
+import Post from "../components/diary/post.vue";
 
 export default {
-  components: {PostForm},
+  components: {Post},
   async asyncData({ store }) {
     await store.dispatch('diary/searchList')
   },

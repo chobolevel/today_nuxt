@@ -32,5 +32,27 @@ export const actions = {
     } else {
       commit('setList', [])
     }
+  },
+  fetch(context, params) {
+    return this.$axios.get(`/api/diary/${params}`)
+  },
+  async fetchDiary({ dispatch, commit }, payload) {
+    const { data } = await dispatch('fetch', payload)
+    if(data) {
+      commit('setItem', data)
+    } else {
+      commit('setItem', {})
+    }
+  },
+  write(context, params) {
+    return this.$axios.post('/api/diary/write', params)
+  },
+  async writeDiary({ dispatch }, payload) {
+    const { status } = await dispatch('write', payload)
+    if(status === 201) {
+      alert('작성이 완료되었습니다')
+    } else {
+      alert('작성 실패!')
+    }
   }
 }
